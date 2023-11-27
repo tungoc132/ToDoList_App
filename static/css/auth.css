@@ -1,0 +1,66 @@
+.header-bar-narrow{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%)
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body a{
+  color: rgb(219, 56, 56);
+}
+
+.card-body .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.form-group .label {
+  font-weight: bold;
+}
+
+.card-body .text-danger {
+  font-weight: bold;
+  padding-left: 2em;
+  padding-bottom: 1em;
+  color: #dc3545 !important;
+}
+
+.card-body ul{
+  font-weight: bold;
+  padding-left: 2em;
+  padding-bottom: .5em;
+  color: #dc3545 !important;
+}
+
+.button-auth{
+    border: 1px solid pink;
+    background-color: white;
+    padding: 5px 20px 5px 20px;
+    margin: 20px 0 10px 0;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    position:relative;
+    left: 44%;
+}
