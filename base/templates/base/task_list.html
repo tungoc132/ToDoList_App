@@ -6,14 +6,14 @@
     <div data-region="blocks-right">
         <div class="header-bar">
             <div>
-                <h3 style="margin: 0;">You have {{count}} incomplete task{{count|pluralize:"s"}}</h3>
+                <h2 style="margin-left: 0px; font-size: 30px;">You have {{count}} incomplete task{{count|pluralize:"s"}}</h2>
             </div>
         </div>
         
         <div class="search-bar">
             <form method="get">
                 <input type='text' name='search-area' value='{{search_input}}'> 
-                <input class="button-search" type="submit" value="Search">
+                <input class="button-create" type="submit" value="Search">
             </form>
             <a class="button-create" href="{% url 'create-task' %}">Create Task</a>
         </div>
@@ -27,13 +27,21 @@
                             <div class="task-complete-icon"></div>
                             <i><s><a href="{% url 'task-edit' task.id %}">{{task}}</a></s></i>
                         </div>
-                        <a class="delete-link" href="{% url 'deletetask' task.id %}">&#215;</a>
+                        <a href="{% url 'deletetask' task.id %}">
+                            <i class="fas fa-trash" style="color: #c71a2b; cursor: pointer;" data-toggle="modal" data-target="#DeleteModal"></i>
+                        </a>
+                        
+                        
                     {% else %}
                         <div class="task-title">
                             <div class="task-incomplete-icon"></div>
                             <a href="{% url 'task-edit' task.id %}">{{task}}</a>
                         </div>
-                        <a class="delete-link" href="{% url 'deletetask' task.id %}">&#215;</a>                
+                        <a href="{% url 'deletetask' task.id %}">
+                            <i class="fas fa-trash" style="color: #c71a2b; cursor: pointer;" data-toggle="modal" data-target="#DeleteModal"></i>
+                        </a>
+                        
+                        
                     {% endif %}
                     
                 </div>

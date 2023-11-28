@@ -12,6 +12,13 @@
     <!-- CSS for Authentication -->
     <link rel="stylesheet" href="{% static 'css/auth.css' %}" />
 
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="{% static 'js/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    
+
     <title>Group9 To-Do List</title>
   </head>
   
@@ -27,8 +34,8 @@
         <a href="{% url 'alltasks' %}" class="name">Taskivist</a>
         <ul class="navbar" style="top: 3.2em">
           <li class="navItem">
-            <a href="">Calendar</a>
-            <a href="">Notification</a>
+            <!-- <a href="">Calendar</a>
+            <a href="">Notification</a> -->
           </li>
         </ul>
         <div class="usrnav">
@@ -48,9 +55,7 @@
     <section id="content">
       <div class="col_left">
         <div data-region="blocks-left">
-          <section
-            class="block_calendar_month block card"
-            data-block="calendar_month">
+          <section class="block_calendar_month block card" data-block="calendar_month">
             <div class="card-body">
               <h2 class="card-title">Calendar</h2>
               <div class="card-calendar"></div>
@@ -61,10 +66,23 @@
 
       {% block maincol %}
 
-      {% endblock %}
+      {% endblock %}      
+
+        {% block delete_completetask %}
+
+        {% endblock %}
+
+        {% block delete_incompletetask %}
+
+        {% endblock %}
+        
+        
+      </div>
     </section>
-<!-- 
-    <section id="footer">
+
+
+
+    <!-- <section id="footer">
       <div class="footer-content">
         <div class="content">
           <p class="rtecenter">
@@ -91,9 +109,6 @@
       </div>
     </section> -->
 
-            ::before
-            
-        </section> -->
     {% else %}
     <!-- Render page for authentication -->
     <div class="auth">

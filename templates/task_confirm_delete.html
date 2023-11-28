@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+<!-- Modal Delete -->
+<div class="modal" id="DeleteModal" tabindex="-1" role="dialog">s
+  <div class="modal-dialog">
+      <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h1 class="modal-title" id="DeleteModalLabel">Confirm</h1>
+      </div>
+
+      <!-- Modal body -->
+      <form action="{% url 'deletetask' task.id %}" method="post">
+          <div class="modal-body">
+              {% csrf_token %}
+              <p>Are you sure to delete "<b>{{task}}</b>"?</p>
+              <!-- <input class="button-submit" type="submit" value="Delete"> -->
+              <a href="{% url 'deletetask' task.id %}"><input class="button-submit" type="submit" data-dismiss="modal" value="Delete"></a>
+              <a href="{% url 'task' task.id %}"><input type="button" class="button-submit" data-dismiss="modal" value="Cancel"></a>
+          </div>
+      </form>
+      <hr>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+          
+          
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="maincol">
+    <div data-region="blocks-right">
+        <div class="header-bar-narrow">
+            <p></p>
+            <a href="{% url 'alltasks' %}">&#8592; Go back</a>
+        </div>
+        
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <p>Are you sure to delete "<b>{{task}}</b>"?</p>
+                <input class="button-submit" type="submit" value="Delete">
+            </form>
+        </div>
+    </div>
+</div> -->

@@ -26,7 +26,7 @@ html, body, section, aside{
 }
 
 #sideheader {
-    background: lightgreen;
+    background: rgb(202, 248, 206);
     box-shadow: 0 8px 12px 0 rgba(0,0,0,.08);
     max-height: 5em;
     position: fixed;
@@ -45,8 +45,9 @@ html, body, section, aside{
     margin-top: 6em;
     display: flex;
     width: 90%;
-    height: 100%;
-    background-color: bisque;
+    height: fit-content;
+    padding-bottom: 30px;
+    background-color: rgb(202, 248, 206);
     box-shadow: 5px 5px 13px 5px rgba(0,0,0,0.21);
     /* flex: 1 0 auto; */  
     /* align-items: center; */
@@ -149,6 +150,7 @@ img{
     order: -1;
     width: 70%;
     float: right;
+    padding-right: 30px;
 }
 
 .col_left .card{
@@ -167,6 +169,11 @@ img{
     padding: 1em !important;
 }
 
+.col_left .card-body p{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
 .col_left h2{
     font-size: 30px;
 }
@@ -181,8 +188,9 @@ img{
     display: flex;
     justify-content: space-between;
     color: #fff;
-    padding: 35px;
+    padding: 35px 35px 35px 15px;
     border-radius: 5px 5px 0 0;
+    /* background: linear-gradient(90deg, #90eec7 0%, #6feb84 43%, #6feb6f 100%); */
     background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%)
 }
 
@@ -232,13 +240,14 @@ a{
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .button-search{
     border: 1px solid pink;
     background-color: white;
-    margin-top: 15px;
+    margin-left: 25px;
     padding: 5px;
     color: red;
     font-weight: bold;
@@ -259,6 +268,7 @@ a{
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    margin: 15px;
 }
 
 .task-wrapper{
@@ -307,7 +317,8 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: first baseline;
-    margin: 15px; 
+    margin: 0; 
+    background: rgb(252, 242, 241);
 }
 
 input[value] {
@@ -318,8 +329,7 @@ input[type=text],
 input[type=password],
 textarea{
     border: 1px solid pink;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin: 15px 5px 0px 15px;
     border-radius: 5px;
     padding: 5px;
     width: 100%;
